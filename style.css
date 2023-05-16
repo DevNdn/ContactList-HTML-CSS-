@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Fjalla+One&family=Nerko+One&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -105,7 +107,15 @@ img {
 
 p {
   padding: 5px;
-  font-size: 1em;
-  font-weight: bold;
+  font-size: 1.1em;
+  
 }
+
+.name, .email {
+  font-family: 'Fjalla One', sans-serif;
+  word-spacing: 3px;
+  letter-spacing: 1px;
+}
+
+
 
