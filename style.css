@@ -5,10 +5,17 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+html {
+  height: 100%;
 }
 
 body {
   width: 100vw;
+  height: 100%;
+  /* height 100% só se o elemento pai (html) estiver com altura definida também */
   
 }
 
@@ -25,7 +32,7 @@ h1 {
   text-align: center;
   margin: auto;
   padding: 20px;
-  font-family: cursive;
+  
   font-size: 3em;
   box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.534);
   border-radius: 5px;
@@ -33,7 +40,7 @@ h1 {
 }
 
 main {
-  background-color: rgb(209, 207, 207);
+  background-color: cadetblue;
   height: 700px;
   display: flex;
   align-items: flex-start;
@@ -64,6 +71,7 @@ h2 {
   height: 400px;
   overflow-y: scroll;
   padding: 2px;
+  
     
 }
 
@@ -72,18 +80,19 @@ h2 {
   background-color: white;
   height: 120px;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: row nowrap;
   align-content: flex-start;
+  
  
 }
 
 .contacts:hover {
-  background-color: rgba(124, 124, 124, 0.521);
+  background-color: #e8e8e8;
 }
 
 .contact-img {
   order: 1;  
-  flex-grow: 2;
+  flex-grow: 0;
   padding: 20px 10px 10px 10px;
 
 }
@@ -93,28 +102,66 @@ img {
   border-radius: 50%;
 }
 
+.actions {
+  order: 3;
+  min-width: 100px;
+  flex-grow: 1;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  gap: 15px;
+  opacity: 0;
+  
+  
+}
+
+a {
+  padding: 5px 0px;
+  
+}
+
+#action-icons {
+  width: 15px;
+  border-radius: 0%;
+  align-content: center;
+  
+  
+}
+
+.contacts:hover .actions {
+  opacity: 0.3;
+}
+
+/* 
+.actions {
+opacity: 0;
+}
+---- + ----
+.contacts:hover .actions {
+  opacity: 0.3;
+}
+
+>> faz com que o icone apareça quando passa o mouse sobre a div sem que haja diminuição da largura.
+
+*/
+
 .info {
   order: 2;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: flex-start;
-  padding: 0px 10px 10px 10px;
-  flex-grow: 2;
+  padding: 0px 5px 10px 10px;
+  flex-grow: 4;
   font-size: clamp(0.8rem, 1rem, 1.3rem);
   
 }
 
-p {
-  padding: 5px;
-  font-size: 1.1em;
-  
-}
 
 .name, .email {
-  font-family: 'Fjalla One', sans-serif;
-  word-spacing: 3px;
-  letter-spacing: 1px;
+  padding: 5px 0;
+  font-size: 18px;
+  word-spacing: 1px;
 }
 
 
