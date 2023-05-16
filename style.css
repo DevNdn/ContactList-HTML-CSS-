@@ -7,24 +7,26 @@
 
 body {
   width: 100vw;
-  position: absolute;
+  
 }
 
 header {
-  
   background-color: cadetblue;
-  display: flex;
   height: 200px;
+  display: flex;
+
+  
 }
 
 h1 {
-  
   width: clamp(250px, 50%, 500px);
   text-align: center;
   margin: auto;
   padding: 20px;
   font-family: cursive;
   font-size: 3em;
+  box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.534);
+  border-radius: 5px;
 
 }
 
@@ -39,13 +41,25 @@ main {
 .container-list {
   border: 2px solid rgba(0, 0, 0, 0.678);
   flex-basis: 600px;
+  box-shadow: 0px 2px 2px 3px rgba(0, 0, 0, 0.534);
+  border-radius: 5px;
+  padding: 1px;
 
+}
+
+h2 {
+  text-align: center;
+  background-color: dimgray;
+  border-bottom: 2px solid black;
+  color: white;
+  padding: 10px 0px;
+  
 }
 
 .box-contact {
   height: 400px;
   overflow-y: scroll;
-  padding: 1px;
+  padding: 2px;
     
 }
 
@@ -89,6 +103,7 @@ img {
 
 p {
   padding: 5px;
-  font-size: 1.2em;
+  font-size: 1em;
+  font-weight: bold;
 }
 
